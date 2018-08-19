@@ -19,5 +19,18 @@ namespace knight_moves_api.Tests
             // Assert
             Assert.IsType<JsonResult>(result);
         }
+
+        [Fact]
+        public void VerifyIndexViewContent()
+        {
+            // Arrange
+            var controller = new HomeController();
+
+            // Act
+            var result = Assert.IsType<JsonResult>(controller.Index());
+
+            // Assert
+            Assert.Equal("Hello World!", result.Value.ToString());
+        }
     }
 }
