@@ -27,3 +27,13 @@ cd knight-moves-api
 docker build -t knight-moves-api .
 docker run -d -p 8080:80 --name knight-moves-app knight-moves-api
 ```
+
+
+### Tests
+
+Go to test project folder and run:
+
+```
+cd knight-moves-api.Tests
+dotnet test
+```
