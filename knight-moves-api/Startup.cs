@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using knight_moves_api.Services;
 
 namespace knight_moves_api
 {
@@ -33,6 +34,8 @@ namespace knight_moves_api
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddScoped<IMoveService, MoveService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
