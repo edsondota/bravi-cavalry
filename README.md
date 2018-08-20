@@ -16,7 +16,7 @@ cd knight-moves-api
 code .
 ```
 
-Then, press F5.
+Then, in Visual Studio Code press F5 to start the application.
 
 
 ### Docker
