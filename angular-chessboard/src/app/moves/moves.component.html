@@ -46,18 +46,8 @@
   </select>
 </p>
 
-<p>Possible black knight moves</p>
-
-<ul class="positions">
-  <li *ngFor="let position of blackKnight.possibleMoves">
-    {{position.coordx}} {{position.coordy}}
-  </li>
-</ul>
-
-<p>Possible white knight moves {{whiteKnight}}</p>
-
-<ul class="positions">
-  <li *ngFor="let position of whiteKnight.possibleMoves">
-    {{position.coordx}} {{position.coordy}}
-  </li>
-</ul>
+<table border="0">
+  <tr *ngFor="let line of chess.rows">
+    <td *ngFor="let col of chess.columns" id="{{col}}{{line}}"></td>
+  </tr>
+</table>

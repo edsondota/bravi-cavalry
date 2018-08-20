@@ -1,0 +1,30 @@
+td {
+    background-color: #D18B47;
+    background-size: contain;
+    height: 20px;
+    width: 20px;
+}
+
+tr:nth-child(odd) td:nth-child(odd) {
+    background-color: #FFCE9E;
+}
+
+tr:nth-child(even) td:nth-child(even) {
+    background-color: #FFCE9E;
+}
+
+td.knight-black {
+    background-image: url('../../assets/img/black-knight.svg');
+}
+
+td.knight-white {
+    background-image: url('../../assets/img/white-knight.svg');
+}
+
+td.white-mark {
+    background-image: url('../../assets/img/white-mark.svg');
+}
+
+td.black-mark {
+    background-image: url('../../assets/img/black-mark.svg');
+}
