@@ -1,3 +1,9 @@
+select {
+    padding: .5em;
+    font-size: 1.3em;
+    margin-right: 5px;
+}
+
 td {
     background-color: #D18B47;
     background-size: contain;
