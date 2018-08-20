@@ -17,14 +17,14 @@ namespace knight_moves_api.Services
             if((pos.coordy + 2) <= 8)
             {
                 cx = getIndexCoordX(pos.coordx);
-                if ((cx + 1) <= 8)
+                if (getCoordXIndex(cx + 1) != "")
                 {
                     moves.Add(new Moves(){
                         coordy = pos.coordy + 2,
                         coordx = getCoordXIndex(cx + 1)
                     });
                 }
-                if ((cx -1) >= 1)
+                if (getCoordXIndex(cx - 1) != "")
                 {
                     moves.Add(new Moves(){
                         coordy = pos.coordy + 2,
@@ -35,14 +35,14 @@ namespace knight_moves_api.Services
             if ((pos.coordy - 2) >= 1)
             {
                 cx = getIndexCoordX(pos.coordx);
-                if ((cx + 1) <= 8)
+                if (getCoordXIndex(cx + 1) != "")
                 {
                     moves.Add(new Moves(){
                         coordy = pos.coordy - 2,
                         coordx = getCoordXIndex(cx + 1)
                     });
                 }
-                if ((cx -1) >= 1)
+                if (getCoordXIndex(cx - 1) != "")
                 {
                     moves.Add(new Moves(){
                         coordy = pos.coordy - 2,
@@ -51,7 +51,7 @@ namespace knight_moves_api.Services
                 }
             }
             cx = getIndexCoordX(pos.coordx);
-            if ((cx + 2) <= 8)
+            if (getCoordXIndex(cx + 2) != "")
             {
                 var cy = pos.coordy;
                 if ((cy + 1) <= 8) {
@@ -67,7 +67,7 @@ namespace knight_moves_api.Services
                     });
                 }
             }
-            if ((cx - 2) <= 8)
+            if (getCoordXIndex(cx - 2) != "")
             {
                 var cy = pos.coordy;
                 if ((cy + 1) <= 8) {
