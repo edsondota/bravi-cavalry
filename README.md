@@ -37,3 +37,24 @@ Go to test project folder and run:
 cd knight-moves-api.Tests
 dotnet test
 ```
+
+
+## Angular App
+
+### Devlopment mode
+
+To run in development mode:
+```
+cd angular-chessboard
+ng serve --open
+```
+
+
+### Docker
+
+To run a container:
+
+```
+ng build --prod
+docker build -t angular-chessboard .
+docker run -d -p 3000:80 --name angular-chessboard angular-chessboard
