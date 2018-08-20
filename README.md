@@ -28,6 +28,8 @@ docker build -t knight-moves-api .
 docker run -d -p 8080:80 --name knight-moves-app knight-moves-api
 ```
 
+or simple `docker-compose up` and `docker-compose down`.
+
 
 ### Tests
 
@@ -58,3 +60,7 @@ To run a container:
 ng build --prod
 docker build -t angular-chessboard .
 docker run -d -p 3000:80 --name angular-chessboard angular-chessboard
+```
+
+
+or simple `docker-compose up` and `docker-compose down`.
