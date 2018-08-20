@@ -14,72 +14,72 @@ namespace knight_moves_api.Services
             var cx = 0;
             var moves = new List<Moves>();
             var pos = knight.ActualPos;
-            if((pos.coordY + 2) <= 8)
+            if((pos.coordy + 2) <= 8)
             {
-                cx = getIndexCoordX(pos.coordX);
+                cx = getIndexCoordX(pos.coordx);
                 if ((cx + 1) <= 8)
                 {
                     moves.Add(new Moves(){
-                        coordY = pos.coordY + 2,
-                        coordX = getCoordXIndex(cx + 1)
+                        coordy = pos.coordy + 2,
+                        coordx = getCoordXIndex(cx + 1)
                     });
                 }
                 if ((cx -1) >= 1)
                 {
                     moves.Add(new Moves(){
-                        coordY = pos.coordY + 2,
-                        coordX = getCoordXIndex(cx - 1)
+                        coordy = pos.coordy + 2,
+                        coordx = getCoordXIndex(cx - 1)
                     });
                 }
             }
-            if ((pos.coordY - 2) >= 1)
+            if ((pos.coordy - 2) >= 1)
             {
-                cx = getIndexCoordX(pos.coordX);
+                cx = getIndexCoordX(pos.coordx);
                 if ((cx + 1) <= 8)
                 {
                     moves.Add(new Moves(){
-                        coordY = pos.coordY - 2,
-                        coordX = getCoordXIndex(cx + 1)
+                        coordy = pos.coordy - 2,
+                        coordx = getCoordXIndex(cx + 1)
                     });
                 }
                 if ((cx -1) >= 1)
                 {
                     moves.Add(new Moves(){
-                        coordY = pos.coordY - 2,
-                        coordX = getCoordXIndex(cx - 1)
+                        coordy = pos.coordy - 2,
+                        coordx = getCoordXIndex(cx - 1)
                     });
                 }
             }
-            cx = getIndexCoordX(pos.coordX);
+            cx = getIndexCoordX(pos.coordx);
             if ((cx + 2) <= 8)
             {
-                var cy = pos.coordY;
+                var cy = pos.coordy;
                 if ((cy + 1) <= 8) {
                     moves.Add(new Moves(){
-                        coordY = cy + 1,
-                        coordX = getCoordXIndex(cx + 2)
+                        coordy = cy + 1,
+                        coordx = getCoordXIndex(cx + 2)
                     });
                 }
                 if ((cy - 1) >= 1) {
                     moves.Add(new Moves(){
-                        coordY = cy - 1,
-                        coordX = getCoordXIndex(cx + 2)
+                        coordy = cy - 1,
+                        coordx = getCoordXIndex(cx + 2)
                     });
                 }
             }
             if ((cx - 2) <= 8)
             {
-                var cy = pos.coordY;
+                var cy = pos.coordy;
                 if ((cy + 1) <= 8) {
                     moves.Add(new Moves(){
-                        coordY = cy + 1,
-                        coordX = getCoordXIndex(cx - 2)
+                        coordy = cy + 1,
+                        coordx = getCoordXIndex(cx - 2)
                     });
                 }
                 if ((cy - 1) >= 1) {
                     moves.Add(new Moves(){
-                        coordY = cy - 1,
-                        coordX = getCoordXIndex(cx - 2)
+                        coordy = cy - 1,
+                        coordx = getCoordXIndex(cx - 2)
                     });
                 }
             }
