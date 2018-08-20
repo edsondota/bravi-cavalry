@@ -7,7 +7,7 @@ An asp net core and angular application for Bravi assesment.
 ## Asp net core application
 
 
-### Devlopment mode
+### Development mode
 
 To run in debug mode:
 
@@ -43,7 +43,7 @@ dotnet test
 
 ## Angular App
 
-### Devlopment mode
+### Development mode
 
 To run in development mode:
 ```
