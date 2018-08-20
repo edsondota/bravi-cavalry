@@ -11,19 +11,15 @@ import { ChessBoard } from '../chessBoard';
 export class MovesComponent implements OnInit {
 
   whiteKnight: Knight = {
-    actualPos: {
-      coordx: 'h',
-      coordy: 1,
-    },
+    coordx: 'h',
+    coordy: 1,
     possibleMoves: [],
     color: 'white'
   }
 
   blackKnight: Knight = {
-    actualPos: {
-      coordx: 'a',
-      coordy: 1,
-    },
+    coordx: 'a',
+    coordy: 1,
     possibleMoves: [],
     color: 'black'
   }
@@ -46,7 +42,7 @@ export class MovesComponent implements OnInit {
 
   verifyPossibleMoves(knight: Knight): void {
     var $this = this;
-    this.knightService.getPositions(knight.actualPos.coordx, knight.actualPos.coordy)
+    this.knightService.getPositions(knight.coordx, knight.coordy)
       .subscribe(
           data => knight.possibleMoves = data.possibleMoves,
           error => console.log("Error: ", error),
@@ -62,7 +58,7 @@ export class MovesComponent implements OnInit {
     Array.from(document.getElementsByClassName(`knight-${knight.color}`)).forEach(element => {
       element.className = '';
     });
-    var $knight = document.getElementById(`${knight.actualPos.coordx}${knight.actualPos.coordy}`);
+    var $knight = document.getElementById(`${knight.coordx}${knight.coordy}`);
     $knight.className = `knight-${knight.color}`;
   }
 

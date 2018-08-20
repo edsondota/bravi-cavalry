@@ -1,6 +1,6 @@
 <p>Select the position of white knight</p>
 <p>
-  <select [(ngModel)]="whiteKnight.actualPos.coordx" (change)="verifyPossibleMoves(whiteKnight)">
+  <select [(ngModel)]="whiteKnight.coordx" (change)="verifyPossibleMoves(whiteKnight)">
     <option>a</option>
     <option>b</option>
     <option>c</option>
@@ -10,7 +10,7 @@
     <option>g</option>
     <option>h</option>
   </select>
-  <select [(ngModel)]="whiteKnight.actualPos.coordy" (change)="verifyPossibleMoves(whiteKnight)">
+  <select [(ngModel)]="whiteKnight.coordy" (change)="verifyPossibleMoves(whiteKnight)">
     <option>1</option>
     <option>2</option>
     <option>3</option>
@@ -24,7 +24,7 @@
 
 <p>Select the position of black knight</p>
 <p>
-  <select [(ngModel)]="blackKnight.actualPos.coordx" (change)="verifyPossibleMoves(blackKnight)">
+  <select [(ngModel)]="blackKnight.coordx" (change)="verifyPossibleMoves(blackKnight)">
     <option>a</option>
     <option>b</option>
     <option>c</option>
@@ -34,7 +34,7 @@
     <option>g</option>
     <option>h</option>
   </select>
-  <select [(ngModel)]="blackKnight.actualPos.coordy" (change)="verifyPossibleMoves(blackKnight)">
+  <select [(ngModel)]="blackKnight.coordy" (change)="verifyPossibleMoves(blackKnight)">
     <option>1</option>
     <option>2</option>
     <option>3</option>

@@ -19,7 +19,7 @@ export class knightService {
 
   constructor(private http: HttpClient) { }
 
-  getPositions(coordx: string, coordy: number): Observable<Knight> {
+  getPositions(coordx: string, coordy: number): Observable<any> {
     return this.http.get<Knight>(`${this.movesUrl}?coordX=${coordx}&coordY=${coordy}`)
       .pipe(
         catchError(this.handleError('getKnight', []))

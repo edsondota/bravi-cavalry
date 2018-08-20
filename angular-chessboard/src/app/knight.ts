@@ -1,5 +1,6 @@
 export class Knight {
     color: string;
-    actualPos: object;
-    possibleMoves: object;
+    coordx: string;
+    coordy: number;
+    possibleMoves: Array<any>;
 }
