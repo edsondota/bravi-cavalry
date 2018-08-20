@@ -1,0 +1,63 @@
+<p>Select the position of white knight</p>
+<p>
+  <select [(ngModel)]="whiteKnight.actualPos.coordx" (change)="verifyPossibleMoves(whiteKnight)">
+    <option>a</option>
+    <option>b</option>
+    <option>c</option>
+    <option>d</option>
+    <option>e</option>
+    <option>f</option>
+    <option>g</option>
+    <option>h</option>
+  </select>
+  <select [(ngModel)]="whiteKnight.actualPos.coordy" (change)="verifyPossibleMoves(whiteKnight)">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+  </select>
+</p>
+
+<p>Select the position of black knight</p>
+<p>
+  <select [(ngModel)]="blackKnight.actualPos.coordx" (change)="verifyPossibleMoves(blackKnight)">
+    <option>a</option>
+    <option>b</option>
+    <option>c</option>
+    <option>d</option>
+    <option>e</option>
+    <option>f</option>
+    <option>g</option>
+    <option>h</option>
+  </select>
+  <select [(ngModel)]="blackKnight.actualPos.coordy" (change)="verifyPossibleMoves(blackKnight)">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+  </select>
+</p>
+
+<p>Possible black knight moves</p>
+
+<ul class="positions">
+  <li *ngFor="let position of blackKnight.possibleMoves">
+    {{position.coordx}} {{position.coordy}}
+  </li>
+</ul>
+
+<p>Possible white knight moves {{whiteKnight}}</p>
+
+<ul class="positions">
+  <li *ngFor="let position of whiteKnight.possibleMoves">
+    {{position.coordx}} {{position.coordy}}
+  </li>
+</ul>
